@@ -24,5 +24,18 @@
       "StackId": "arn:aws:cloudformation:us-east-1:936471194299:stack/amplify-horaciotodo-dev-131606/7ed0cee0-13c9-11eb-9085-1254a8a4acf7",
       "AmplifyAppId": "d1cgno9paj0jip"
     }
+  },
+  "devv": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-horaciotodo-devv-204133-authRole",
+      "UnauthRoleArn": "arn:aws:iam::115238827609:role/amplify-horaciotodo-devv-204133-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::115238827609:role/amplify-horaciotodo-devv-204133-authRole",
+      "Region": "eu-west-1",
+      "DeploymentBucketName": "amplify-horaciotodo-devv-204133-deployment",
+      "UnauthRoleName": "amplify-horaciotodo-devv-204133-unauthRole",
+      "StackName": "amplify-horaciotodo-devv-204133",
+      "StackId": "arn:aws:cloudformation:eu-west-1:115238827609:stack/amplify-horaciotodo-devv-204133/0d396220-13cd-11eb-a7ab-06c305fba8da",
+      "AmplifyAppId": "d3256myaqpw1iy"
+    }
   }
 }

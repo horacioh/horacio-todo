@@ -1,7 +1,6 @@
 import React from 'react'
 
 function TodoForm({ handleFormSubmit }) {
-  let todoID = React.useRef(0)
   const [inputValue, setInputValue] = React.useState('')
 
   const handleInputChange = (e) => {
@@ -9,11 +8,8 @@ function TodoForm({ handleFormSubmit }) {
   }
 
   const handleSubmit = (e) => {
-    console.log('called')
     e.preventDefault()
-    todoID.current = todoID.current + 1
     handleFormSubmit({
-      id: todoID.current,
       title: inputValue,
       completed: false,
     })

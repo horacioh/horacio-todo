@@ -3,6 +3,8 @@ import Header from './Header'
 import Footer from './Footer'
 import TodoForm from './TodoForm'
 import TodoList from './TodoList'
+import { API } from 'aws-amplify'
+import { createTodo } from './graphql/mutations'
 
 function App() {
   const [todos, setTodos] = React.useState([
@@ -13,8 +15,16 @@ function App() {
     },
   ])
 
-  const handleFormSubmit = (newTodo) => {
-    setTodos([...todos, newTodo])
+  const handleFormSubmit = async (newTodo) => {
+    const result = await API.graphql({
+      query: createTodo,
+      variables: {
+        input: newTodo
+      }
+    })
+    console.log({result})
+
+    setTodos([...todos, result.data.createTodo])
   }
   return (
     <div className="w-screen h-screen bg-gray-100 p-4">
